@@ -1,7 +1,32 @@
-# Welcome to streamlit
+# Sentiment Scout
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+## Description
+Sentiment Scout is a Streamlit-based application for sentiment analysis. It allows users to input reviews or comments, and it predicts the sentiment of the input text using a pre-trained sentiment analysis model. The application also extracts aspects from the input text and displays them along with the predicted sentiment.
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+## Features
+- User-friendly interface
+- Input field for entering reviews/comments
+- Analyse button to trigger sentiment analysis
+- Displays predicted sentiment and extracted aspects
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+## Requirements
+- Python 3.x
+- Streamlit
+- NLTK
+- Pickle (for loading the pre-trained sentiment analysis model)
+
+## Installation
+1. Clone this repository.
+2. Install the required dependencies using the following command:
+pip install -r requirements.txt
+
+## Usage
+1. Open the application in your web browser.
+2. Enter a review or comment in the provided text area.
+3. Click on the "Analyse" button to trigger the sentiment analysis.
+4. The application will display the predicted sentiment and extracted aspects.
+
+## Credits
+- Author: Anvitha Hiriadka
+- Created on: 04/21/2024
+
