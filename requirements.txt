@@ -4,4 +4,4 @@ pandas
 pydeck
 streamlit
 nltk
-sklearn
+scikit-learn
