@@ -26,6 +26,9 @@ pip install -r requirements.txt
 3. Click on the "Analyse" button to trigger the sentiment analysis.
 4. The application will display the predicted sentiment and extracted aspects.
 
+## App URL
+The deployed version of this application can be found at: [Sentiment Scout Application](https://sentiment-scout-application.streamlit.app/)
+
 ## Credits
 - Author: Anvitha Hiriadka
 - Created on: 04/21/2024
