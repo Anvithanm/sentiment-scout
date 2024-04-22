@@ -31,21 +31,23 @@ LOGGER = get_logger(__name__)
 with open("sentiment_analysis.pkl", 'rb') as file:
     model = pickle.load(file)
 
+# Load SpaCy English model
+nlp = spacy.load("en_core_web_sm")
 #Function to extract the aspects from the review
 def extract_aspect(review):
+    doc = nlp(review)
     aspects = []
-    for word, pos in pos_tag(review):
-        if pos.startswith('NN'):
-            aspects.append(word)
+    for token in doc:
+        if token.pos_ in ["NOUN", "PROPN"]:  # Consider nouns and proper nouns as aspects
+            aspects.append(token.text)
     result = ' '.join(aspects)
     return result
 
 #Function to perform aspect-based sentiment analysis
 def aspect_based_sentiment_analysis(input_data):
-    tokenize_words = word_tokenize(input_data)
-    get_aspect = extract_aspect(tokenize_words)
+    get_aspect = extract_aspects(review)
     review_aspect = list(get_aspect.split(" "))
-    predicted_sentiment = model.predict([input_data])
+    predicted_sentiment = model.predict([review])
     return predicted_sentiment[0], review_aspect
 
 #Function to run the streamlit application
