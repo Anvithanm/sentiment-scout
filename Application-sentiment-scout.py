@@ -35,7 +35,7 @@ with open("sentiment_analysis.pkl", 'rb') as file:
 def extract_aspect(review):
     aspects = []
     for word, pos in pos_tag(review):
-        if pos.startswith('NN','NNP'):
+        if pos.startswith('NN'):
             aspects.append(word)
     result = ' '.join(aspects)
     return result
