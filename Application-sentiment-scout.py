@@ -20,7 +20,6 @@ from streamlit.logger import get_logger
 import nltk
 from nltk import pos_tag
 from nltk import word_tokenize
-import spacy
 #Setting up NLTK resources
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -32,23 +31,21 @@ LOGGER = get_logger(__name__)
 with open("sentiment_analysis.pkl", 'rb') as file:
     model = pickle.load(file)
 
-# Load SpaCy English model
-nlp = spacy.load("en_core_web_sm")
 #Function to extract the aspects from the review
 def extract_aspect(review):
-    doc = nlp(review)
     aspects = []
-    for token in doc:
-        if token.pos_ in ["NOUN", "PROPN"]:  # Consider nouns and proper nouns as aspects
-            aspects.append(token.text)
+    for word, pos in pos_tag(review):
+        if pos.startswith('NN','NNP'):
+            aspects.append(word)
     result = ' '.join(aspects)
     return result
 
 #Function to perform aspect-based sentiment analysis
 def aspect_based_sentiment_analysis(input_data):
-    get_aspect = extract_aspects(review)
+    tokenize_words = word_tokenize(input_data)
+    get_aspect = extract_aspect(tokenize_words)
     review_aspect = list(get_aspect.split(" "))
-    predicted_sentiment = model.predict([review])
+    predicted_sentiment = model.predict([input_data])
     return predicted_sentiment[0], review_aspect
 
 #Function to run the streamlit application
