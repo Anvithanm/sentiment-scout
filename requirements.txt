@@ -5,4 +5,4 @@ pydeck
 streamlit
 nltk
 scikit-learn
-import spacy
+spacy
