@@ -20,7 +20,6 @@ from streamlit.logger import get_logger
 import nltk
 from nltk import pos_tag
 from nltk import word_tokenize
-import spacy
 #Setting up NLTK resources
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
