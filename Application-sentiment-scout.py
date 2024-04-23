@@ -24,6 +24,10 @@ import spacy
 #Setting up NLTK resources
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
+import spacy.cli
+
+# Download 'en_core_web_sm' model
+spacy.cli.download("en_core_web_sm")
 
 #Getting logger object for logging
 LOGGER = get_logger(__name__)
