@@ -38,7 +38,7 @@ def extract_aspect(review):
     for word, pos in pos_tag(review):
         if pos.startswith('NN') or pos in ['NNP', 'NNPS']:
             aspects.append(word)
-    result = ' '.join(aspects)
+    result = ', '.join(aspects)
     return result
 
 #Function to perform aspect-based sentiment analysis
