@@ -5,4 +5,5 @@ pydeck
 streamlit
 nltk
 scikit-learn
-
+spacy==3.1.0
+en_core_web_sm==3.1.0
