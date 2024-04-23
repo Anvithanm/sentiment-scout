@@ -6,4 +6,3 @@ streamlit
 nltk
 scikit-learn
 spacy
-en_core_web_sm==3.1.0
