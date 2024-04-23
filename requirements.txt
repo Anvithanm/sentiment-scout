@@ -5,4 +5,3 @@ pydeck
 streamlit
 nltk
 scikit-learn
-spacy
