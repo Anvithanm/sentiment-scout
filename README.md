@@ -14,6 +14,7 @@ Sentiment Scout is a Streamlit-based application for sentiment analysis. It allo
 - Streamlit
 - NLTK
 - Pickle (for loading the pre-trained sentiment analysis model)
+- scikit-learn
 
 ## Installation
 1. Clone this repository.
