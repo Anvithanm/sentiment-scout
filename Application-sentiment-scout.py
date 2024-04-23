@@ -44,10 +44,9 @@ def extract_aspect(review):
 #Function to perform aspect-based sentiment analysis
 def aspect_based_sentiment_analysis(input_data):
     tokenize_words = word_tokenize(input_data)
-    get_aspect = extract_aspect(tokenize_words)
-    #review_aspect = list(get_aspect.split(" "))
+    result_aspect = extract_aspect(tokenize_words)
     predicted_sentiment = model.predict([input_data])
-    return predicted_sentiment[0], get_aspect
+    return predicted_sentiment[0], result_aspect
 
 #Function to run the streamlit application
 def run():
