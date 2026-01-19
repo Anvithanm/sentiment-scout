@@ -6,12 +6,12 @@
 
 The system identifies **sentiment polarity (positive, neutral, negative)** and the **specific aspects** (e.g., food, service, staff, ambience) discussed in customer feedback, enabling fine-grained analysis beyond document-level sentiment.
 
-This project was built primarily in **Jupyter Notebook** for experimentation and analysis, and later deployed as a production-style application, reflecting applied ML engineering practices.
+This project was built primarily in Jupyter Notebook for experimentation and analysis, and later deployed as a production-style application, reflecting applied ML engineering practices.
 
 ---
 
 ## Key Highlights (ML Engineer Focus)
-- End-to-end NLP pipeline implemented in **Jupyter Notebook**
+- End-to-end NLP pipeline
 - Large-scale real-world dataset (~33K customer reviews)
 - Aspect extraction using **spaCy POS tagging**
 - TF-IDF feature representation for classical ML models
