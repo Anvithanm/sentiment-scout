@@ -91,6 +91,7 @@ Models were evaluated using:
 ## Web Application  
 The trained model is deployed as an interactive **Streamlit** application.
 
+## Demo Link : https://drive.google.com/file/d/16r3pp_rn6YMAt9Gtgkby_9WVbtb4AVM-/view?usp=sharing
 **Application Features**
 - User input for custom reviews  
 - Real-time sentiment prediction  
