@@ -6,12 +6,12 @@
 
 The system identifies **sentiment polarity (positive, neutral, negative)** and the **specific aspects** (e.g., food, service, staff, ambience) discussed in customer feedback, enabling fine-grained analysis beyond document-level sentiment.
 
-This project was built primarily in Jupyter Notebook for experimentation and analysis, and later deployed as a production-style application, reflecting applied ML engineering practices.
+This project was built primarily in **Jupyter Notebook** for experimentation and analysis, and later deployed as a production-style application, reflecting applied ML engineering practices.
 
 ---
 
 ## Key Highlights (ML Engineer Focus)
-- End-to-end NLP pipeline
+- End-to-end NLP pipeline implemented in **Jupyter Notebook**
 - Large-scale real-world dataset (~33K customer reviews)
 - Aspect extraction using **spaCy POS tagging**
 - TF-IDF feature representation for classical ML models
@@ -107,11 +107,26 @@ The trained model is deployed as an interactive **Streamlit** application.
 
 ## Repository Structure  
 ```
-├── Sentiment_Scout.ipynb        # End-to-end ML pipeline
-├── app.py                      # Streamlit web application
-├── model.pkl                   # Trained sentiment model
-├── requirements.txt            # Project dependencies
-├── README.md                   # Project documentation
+├── Application-sentiment-scout.py   # Streamlit web application
+├── Image_app.png                    # App UI snapshot
+├── sentiment_analysis.pkl           # Serialized trained model
+├── utils.py                         # Helper functions (preprocessing, inference)
+├── requirements.txt                 # Python dependencies
+├── README.md                        # Project documentation
+├── __init__.py
+│
+├── Model/
+│   └── Sentiment_Analysis_Model.ipynb   # End-to-end ML pipeline (EDA → modeling)
+│
+├── dataset/
+│   ├── McDonalds_Reviews.csv            # Raw dataset
+│   └── project_processed_data.csv      # Cleaned & processed dataset
+│
+├── docs/
+│   ├── Building_block.jpg               # Model architecture overview
+│   ├── Image_app.png                    # Application screenshot
+│   ├── Presentation2.pptx               # Project presentation
+│   └── Project_Report.pdf
 ```
 
 ---
