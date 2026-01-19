@@ -1,4 +1,4 @@
-# Sentiment Scout
+# The Sentiment Scout: Aspect based Sentiment Analysis of Customer Experience
 
 ## Description
 Sentiment Scout is a Streamlit-based application for sentiment analysis. It allows users to input reviews or comments, and it predicts the sentiment of the input text using a pre-trained sentiment analysis model. The application also extracts aspects from the input text and displays them along with the predicted sentiment.
